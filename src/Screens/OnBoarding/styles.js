@@ -18,7 +18,7 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
   },
   heading: {
-    ...commonStyles.fontBold24,
+    ...commonStyles.fontBold32,
     color: colors.white,
   },
   buttonView: {

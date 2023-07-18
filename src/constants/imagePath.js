@@ -16,4 +16,5 @@ export default {
   apple: require('../assets/images/apple.png'),
   google: require('../assets/images/google.png'),
   fb: require('../assets/images/ic_facebook.png'),
+  home: require('../assets/images/home.png'),
 };

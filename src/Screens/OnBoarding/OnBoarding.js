@@ -20,14 +20,20 @@ import {
 } from '../../styles/responsiveSize';
 import colors from '../../styles/colors';
 import styles from './styles';
+import navigationStrings from '../../constants/navigationStrings';
 
 // create a component
-const OnBoarding = () => {
-  const SocialLoginButton = ({image = imagePath.fb, string, onPress}) => {
+const OnBoarding = ({navigation}) => {
+  const SocialLoginButton = ({
+    image = imagePath.fb,
+    string,
+    onPress,
+    imgStyle,
+  }) => {
     return (
       <View style={styles.socialLoginView}>
         <TouchableOpacity style={styles.signInWith} onPress={onPress}>
-          <Image source={image} />
+          <Image source={image} style={{height: 24, width: 24}} />
           <Text style={styles.continueWith}>{string}</Text>
         </TouchableOpacity>
       </View>
@@ -58,6 +64,15 @@ const OnBoarding = () => {
             // onPress={appleLogin}
             image={imagePath.apple}
             string={strings.apple}
+          />
+
+          <SocialLoginButton
+            onPress={() =>
+              navigation.navigate(navigationStrings.LEARNING_REACT_NATIVE)
+            }
+            image={imagePath.home}
+            string={'Home'}
+            imgStyle={{height: 6, with: 6}}
           />
 
           {/* //   ) : null} */}

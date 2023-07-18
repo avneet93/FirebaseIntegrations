@@ -1,5 +1,9 @@
-import { StyleSheet } from 'react-native';
-import {moderateScale, moderateScaleVertical, textScale} from './responsiveSize';
+import {StyleSheet} from 'react-native';
+import {
+  moderateScale,
+  moderateScaleVertical,
+  textScale,
+} from './responsiveSize';
 import colors from './colors';
 import fontFamily from './fontFamily';
 
@@ -7,8 +11,8 @@ export const hitSlopProp = {
   top: 12,
   right: 12,
   left: 12,
-  bottom: 12
-}
+  bottom: 12,
+};
 export default StyleSheet.create({
   fontSize10: {
     fontSize: textScale(10),
@@ -94,6 +98,16 @@ export default StyleSheet.create({
     color: colors.black,
     fontFamily: fontFamily.bold,
   },
+  fontBold28: {
+    fontSize: textScale(28),
+    color: colors.black,
+    fontFamily: fontFamily.bold,
+  },
+  fontBold32: {
+    fontSize: textScale(32),
+    color: colors.black,
+    fontFamily: fontFamily.bold,
+  },
   loader: {
     position: 'absolute',
     left: 0,
@@ -108,7 +122,7 @@ export default StyleSheet.create({
     backgroundColor: colors.white,
     borderRadius: 4,
     shadowColor: '#000',
-    shadowOffset: { width: 0, height: 1 },
+    shadowOffset: {width: 0, height: 1},
     shadowOpacity: 0.4,
     shadowRadius: 2,
     elevation: 2,
@@ -127,15 +141,14 @@ export default StyleSheet.create({
     justifyContent: 'space-between',
   },
 
-
   fontSize40: {
     fontFamily: fontFamily.bold,
     fontSize: textScale(40),
-    color: colors.white
+    color: colors.white,
   },
   flexView: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-  }
+  },
 });
