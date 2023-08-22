@@ -21,6 +21,7 @@ import {
 import colors from '../../styles/colors';
 import styles from './styles';
 import navigationStrings from '../../constants/navigationStrings';
+import {googleLogin} from '../../utils/socialLogin';
 
 // create a component
 const OnBoarding = ({navigation}) => {
@@ -51,6 +52,7 @@ const OnBoarding = ({navigation}) => {
         <View style={{}}>
           <SocialLoginButton
             // onPress={() => googleSignIn()}
+            onPress={() => googleLogin()}
             image={imagePath.google}
             string={strings.google}
           />
